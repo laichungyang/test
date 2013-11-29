@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html xmlns = "http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv = "Content-Type" content = "text/html; charset=utf-8" />
+
+<title> </title>
+
+<script type = "text/javascript">
+
+function myMessageHandler( event ) {
+
+
+
+document.getElementById( "result" ).innerHTML = event.data;
+
+// event.source.postMessage( "Response from iFrame: " + event.data , event.origin );
+
+
+}
+
+function contentLoaded() {
+
+window.addEventListener( "message", myMessageHandler );
+
+}
+
+window.addEventListener( "DOMContentLoaded", contentLoaded, false );
+
+</script>
+
+</head>
+
+<body>
+
+<h1> iFrame </h1>
+
+<div id = "result"> </div>
+
+</body>
+
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table,td,th {
+	border: 1px solid black;
+}
+
+td {
+	height: 50px;
+	width: 50px;
+}
+</style>
+
+<script>
+	sessionStorage.turn = 0;
+	function t() {
+		sessionStorage.turn = sessionStorage.turn + 1;
+	}
+	function f() {
+		var a = document.getElementById("A").innerHTML;
+		var b = document.getElementById("B").innerHTML;
+		var c = document.getElementById("C").innerHTML;
+		var d = document.getElementById("D").innerHTML;
+		var e = document.getElementById("E").innerHTML;
+		var f = document.getElementById("F").innerHTML;
+		var g = document.getElementById("G").innerHTML;
+		var h = document.getElementById("H").innerHTML;
+		var i = document.getElementById("I").innerHTML;
+		if ((a == "O" && b == "O" && c == "O")
+				|| (d == "O" && e == "O" && f == "O")
+				|| (g == "O" && h == "O" && i == "O")
+				|| (a == "O" && d == "O" && g == "O")
+				|| (b == "O" && e == "O" && h == "O")
+				|| (c == "O" && f == "O" && i == "O")
+				|| (a == "O" && e == "O" && i == "O")
+				|| (c == "O" && e == "O" && g == "O")) {
+			alert("P1 WIN");
+		}
+	}
+	var txt;
+	function ChoiceA() {
+
+		if (sessionStorage.turn == 0) {
+			var a = String(document.getElementById("A").innerHTML);
+			if (a == "O" || a == "X") {
+				alert("已經人有下過了");
+			} else {
+				document.getElementById("A").innerHTML = "O";
+				txt = "A";
+				document.getElementById('MyiFrame1').contentWindow.postMessage(
+						txt, "http://localhost:8080/d20130725/ifarme2.html");
+				f();
+				t();
+			}
+		} else {
+			alert("不是換你");
+		}
+	}
+	function ChoiceB() {
+		if (sessionStorage.turn == 0) {
+			var a = String(document.getElementById("B").innerHTML);
+			if (a == "O" || a == "X") {
+				alert("已經人有下過了");
+			} else {
+				txt = "B";
+				document.getElementById("B").innerHTML = "O";
+				document.getElementById('MyiFrame1').contentWindow.postMessage(
+						txt, "http://localhost:8080/d20130725/ifarme2.html");
+				f();
+				t();
+			}
+		} else {
+			alert("不是換你");
+		}
+	}
+	function ChoiceC() {
+		if (sessionStorage.turn == 0) {
+			var a = String(document.getElementById("C").innerHTML);
+			if (a == "O" || a == "X") {
+				alert("已經人有下過了");
+			} else {
+				document.getElementById("C").innerHTML = "O";
+				txt = "C";
+				document.getElementById('MyiFrame1').contentWindow.postMessage(
+						txt, "http://localhost:8080/d20130725/ifarme2.html");
+				f();
+				t();
+			}
+		} else {
+			alert("不是換你");
+		}
+	}
+	function ChoiceD() {
+		if (sessionStorage.turn == 0) {
+			var a = String(document.getElementById("D").innerHTML);
+			if (a == "O" || a == "X") {
+				alert("已經人有下過了");
+			} else {
+				document.getElementById("D").innerHTML = "O";
+				txt = "D";
+				document.getElementById('MyiFrame1').contentWindow.postMessage(
+						txt, "http://localhost:8080/d20130725/ifarme2.html");
+				f();
+				t();
+			}
+		} else {
+			alert("不是換你");
+		}
+	}
+	function ChoiceE() {
+		if (sessionStorage.turn == 0) {
+			var a = String(document.getElementById("E").innerHTML);
+			if (a == "O" || a == "X") {
+				alert("已經人有下過了");
+			} else {
+				document.getElementById("E").innerHTML = "O";
+				txt = "E";
+				document.getElementById('MyiFrame1').contentWindow.postMessage(
+						txt, "http://localhost:8080/d20130725/ifarme2.html");
+				f();
+				t();
+			}
+		} else {
+			alert("不是換你");
+		}
+	}
+	function ChoiceF() {
+		if (sessionStorage.turn == 0) {
+			var a = String(document.getElementById("F").innerHTML);
+			if (a == "O" || a == "X") {
+				alert("已經人有下過了");
+			} else {
+				document.getElementById("F").innerHTML = "O";
+				txt = "F";
+				document.getElementById('MyiFrame1').contentWindow.postMessage(
+						txt, "http://localhost:8080/d20130725/ifarme2.html");
+				f();
+				t();
+			}
+		} else {
+			alert("不是換你");
+		}
+	}
+	function ChoiceG() {
+		if (sessionStorage.turn == 0) {
+			var a = String(document.getElementById("G").innerHTML);
+			if (a == "O" || a == "X") {
+				alert("已經人有下過了");
+			} else {
+				document.getElementById("G").innerHTML = "O";
+				txt = "G";
+				document.getElementById('MyiFrame1').contentWindow.postMessage(
+						txt, "http://localhost:8080/d20130725/ifarme2.html");
+				f();
+				t();
+			}
+		} else {
+			alert("不是換你");
+		}
+	}
+	function ChoiceH() {
+		if (sessionStorage.turn == 0) {
+			var a = String(document.getElementById("H").innerHTML);
+			if (a == "O" || a == "X") {
+				alert("已經人有下過了");
+			} else {
+				document.getElementById("H").innerHTML = "O";
+				txt = "H";
+				document.getElementById('MyiFrame1').contentWindow.postMessage(
+						txt, "http://localhost:8080/d20130725/ifarme2.html");
+				f();
+				t();
+			}
+		} else {
+			alert("不是換你");
+		}
+	}
+	function ChoiceI() {
+		if (sessionStorage.turn == 0) {
+			var a = String(document.getElementById("I").innerHTML);
+			if (a == "O" || a == "X") {
+				alert("已經人有下過了");
+			} else {
+				document.getElementById("I").innerHTML = "O";
+				txt = "I";
+				document.getElementById('MyiFrame1').contentWindow.postMessage(
+						txt, "http://localhost:8080/d20130725/ifarme2.html");
+				f();
+				t();
+			}
+		} else {
+			alert("不是換你");
+		}
+	}
+</script>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<td><a href="javascript:ChoiceA()" id="A"><img
+					src="http://211.75.223.181/game/game2/blank.jpg" width=50 height=50></a>
+			</td>
+			<td><a href="javascript:ChoiceB()" id="B"><img
+					src="http://211.75.223.181/game/game2/blank.jpg" width=50 height=50></a>
+			</td>
+			<td><a href="javascript:ChoiceC()" id="C"><img
+					src="http://211.75.223.181/game/game2/blank.jpg" width=50 height=50></a>
+			</td>
+		</tr>
+
+		<tr>
+			<td><a href="javascript:ChoiceD()" id="D"><img
+					src="http://211.75.223.181/game/game2/blank.jpg" width=50 height=50></a>
+			</td>
+			<td><a href="javascript:ChoiceE()" id="E"><img
+					src="http://211.75.223.181/game/game2/blank.jpg" width=50 height=50></a>
+			</td>
+			<td><a href="javascript:ChoiceF()" id="F"><img
+					src="http://211.75.223.181/game/game2/blank.jpg" width=50 height=50></a>
+			</td>
+		</tr>
+
+		<tr>
+			<td><a href="javascript:ChoiceG()" id="G"><img
+					src="http://211.75.223.181/game/game2/blank.jpg" width=50 height=50></a>
+			</td>
+			<td><a href="javascript:ChoiceH()" id="H"><img
+					src="http://211.75.223.181/game/game2/blank.jpg" width=50 height=50></a>
+			</td>
+			<td><a href="javascript:ChoiceI()" id="I"><img
+					src="http://211.75.223.181/game/game2/blank.jpg" width=50 height=50></a>
+			</td>
+		</tr>
+
+	</table>
+	<p id="result">player1</p>
+	<iframe id="MyiFrame1"
+		src="http://localhost:8080/d20130725/ifarme2.html"
+		style="height: 250px; width: 250px; border: 0px"></iframe>
+
+</body>
+</html>

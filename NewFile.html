@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html xmlns = "http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv = "Content-Type" content = "text/html; charset=utf-8" />
+
+<title> </title>
+
+<script type = "text/javascript">
+
+var txt;
+
+function contentLoaded () {
+
+if ( typeof ( window.postMessage ) !== "undefined" ) {
+
+document.getElementById( "result" ).innerHTML = "您的瀏覽器支援postMessage功能<br>";
+
+}
+
+else {
+
+document.getElementById( "result" ).innerHTML = "您的瀏覽器不支援postMessage功能<br>";
+
+return;
+
+}
+
+function myMessageHandler( event ) {
+
+	if ( event.origin === "http://localhost:8080" ) {
+
+	txt = event.data;
+
+	document.getElementById( "result" ).innerHTML += txt + "<br>";
+
+
+
+document.getElementById( "Button1" ).addEventListener( "click", Button1_Click, false );
+
+}
+
+function Button1_Click () {
+
+txt = document.getElementById( 'Text1' ).value;
+
+document.getElementById( 'MyiFrame' ).contentWindow.postMessage( txt, "http://localhost:8080/d20130725/iFarme.html" );
+
+document.getElementById( "result" ).innerHTML += "送出訊息 : " + txt + "<br>";
+
+}
+
+window.addEventListener( "DOMContentLoaded", contentLoaded, false );
+window.addEventListener( "message", myMessageHandler );
+</script>
+
+<style type = "text/css">
+
+#Parent {
+
+display: -moz-box;
+
+display: -ms-box;
+
+display: -webkit-box;
+
+width: 100%;
+
+position: absolute;
+
+bottom: 0;
+
+left:0;
+
+}
+
+#Child1 {
+
+-moz-box-flex: 1;
+
+-ms-box-flex: 1;
+
+-webkit-box-flex: 1;
+
+width: 100px;
+
+background-color: #ffd800;
+
+}
+
+#Child2 {
+
+-moz-box-flex: 3;
+
+-ms-box-flex: 3;
+
+-webkit-box-flex: 3;
+
+width: 200px;
+
+background-color: #00ff21;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id = "result"> </div>
+
+<div id = "Parent">
+
+<div id = "Child1">
+
+<input id = "Text1" type = "text" />
+
+<input id = "Button1" type = "button" value = "Send Message:" />
+
+</div>
+
+<div id = "Child2">
+
+<iframe id = "MyiFrame" src="http://localhost:8080/d20130725/iFarme.html"
+
+style = "overflow: hidden; height: 100%; width: 100%; border: 0px" />
+
+</div>
+
+</div>
+
+</body>
+
+</html>

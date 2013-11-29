@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myMessageHandler( event ) {
+
+	if ( event.origin == "http://localhost:8080" ) {
+
+	document.getElementById( "1" ).innerHTML = event.data;
+
+	}
+
+	}
+function contentLoaded() {
+
+	window.addEventListener( "message", myMessageHandler );
+
+	}
+window.addEventListener( "DOMContentLoaded", contentLoaded, false );
+</script>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<p id="1">55</p>
+</body>
+</html>

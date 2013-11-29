@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table,td,th {
+	border: 1px solid black;
+}
+
+td {
+	height: 50px;
+	width: 50px;
+}
+</style>
+
+<script>
+	function t1() {
+		sessionStorage.turn = sessionStorage.turn - 1;
+	}
+	function f() {
+		var a = document.getElementById("A").innerHTML;
+		var b = document.getElementById("B").innerHTML;
+		var c = document.getElementById("C").innerHTML;
+		var d = document.getElementById("D").innerHTML;
+		var e = document.getElementById("E").innerHTML;
+		var f = document.getElementById("F").innerHTML;
+		var g = document.getElementById("G").innerHTML;
+		var h = document.getElementById("H").innerHTML;
+		var i = document.getElementById("I").innerHTML;
+		if ((a == "X" && b == "X" && c == "X")
+				|| (d == "X" && e == "X" && f == "X")
+				|| (g == "X" && h == "X" && i == "X")
+				|| (a == "X" && d == "X" && g == "X")
+				|| (b == "X" && e == "X" && h == "X")
+				|| (c == "X" && f == "X" && i == "X")
+				|| (a == "X" && e == "X" && i == "X")
+				|| (c == "X" && e == "X" && g == "X")) {
+			alert("P2 WIN");
+		}
+	}
+	var t;
+	function ChoiceA() {
+		if (sessionStorage.turn == 1) {
+			var a = String(document.getElementById("A").innerHTML);
+			if (a == "O" || a == "X") {
+				alert("已經人有下過了");
+			} else {
+				document.getElementById("A").innerHTML = "X";
+				t = "A";
+				parent.document.getElementById("A").innerHTML = "X";
+				f();
+				t1();
+			}
+		}else {alert("不是換你");}
+	}
+	function ChoiceB() {
+		if (sessionStorage.turn == 1) {
+		var a = String(document.getElementById("B").innerHTML);
+		if (a == "O" || a == "X") {
+			alert("已經人有下過了");
+		} else {
+			document.getElementById("B").innerHTML = "X";
+			parent.document.getElementById("B").innerHTML = "X";
+			f();t1();}
+		}{alert("不是換你");}
+	}
+	function ChoiceC() {
+		if (sessionStorage.turn == 1) {
+		var a = String(document.getElementById("C").innerHTML);
+		if (a == "O" || a == "X") {
+			alert("已經人有下過了");
+		} else {
+			document.getElementById("C").innerHTML = "X";
+			parent.document.getElementById("C").innerHTML = "X";
+			f();t1();}
+		}else {alert("不是換你");}
+	}
+	function ChoiceD() {if (sessionStorage.turn == 1) {
+		var a = String(document.getElementById("D").innerHTML);
+		if (a == "O" || a == "X") {
+			alert("已經人有下過了");
+		} else {
+			document.getElementById("D").innerHTML = "X";
+			parent.document.getElementById("D").innerHTML = "X";
+			f();t1();}
+		}else {alert("不是換你");}
+	}
+	function ChoiceE() {if (sessionStorage.turn == 1) {
+		var a = String(document.getElementById("E").innerHTML);
+		if (a == "O" || a == "X") {
+			alert("已經人有下過了");
+		} else {
+			document.getElementById("E").innerHTML = "X";
+			parent.document.getElementById("E").innerHTML = "X";
+			f();t1();}
+		}else {alert("不是換你");}
+	}
+	function ChoiceF() {if (sessionStorage.turn == 1) {
+		var a = String(document.getElementById("F").innerHTML);
+		if (a == "O" || a == "X") {
+			alert("已經人有下過了");
+		} else {
+			document.getElementById("F").innerHTML = "X";
+			parent.document.getElementById("F").innerHTML = "X";
+			f();t1();}
+		}else {alert("不是換你");}
+	}
+	function ChoiceG() {if (sessionStorage.turn == 1) {
+		var a = String(document.getElementById("G").innerHTML);
+		if (a == "O" || a == "X") {
+			alert("已經人有下過了");
+		} else {
+			document.getElementById("G").innerHTML = "X";
+			parent.document.getElementById("G").innerHTML = "X";
+			f();t1();}
+		}else {alert("不是換你");}
+	}
+	function ChoiceH() {if (sessionStorage.turn == 1) {
+		var a = String(document.getElementById("H").innerHTML);
+		if (a == "O" || a == "X") {
+			alert("已經人有下過了");
+		} else {
+			document.getElementById("H").innerHTML = "X";
+			parent.document.getElementById("H").innerHTML = "X";
+			f();t1();}
+		}else {alert("不是換你");}
+	}
+	function ChoiceI() {if (sessionStorage.turn == 1) {
+		var a = String(document.getElementById("I").innerHTML);
+		if (a == "O" || a == "X") {
+			alert("已經人有下過了");
+		} else {
+			document.getElementById("I").innerHTML = "X";
+			parent.document.getElementById("I").innerHTML = "X";
+			f();t1();}
+		}else {alert("不是換你");}
+	}
+
+	function myMessageHandler(event) {
+		//document.getElementById( "result" ).innerHTML = event.data;
+		if (event.data == "A") {
+			document.getElementById("A").innerHTML = "O";
+		}
+		if (event.data == "B") {
+			document.getElementById("B").innerHTML = "O";
+		}
+		if (event.data == "C") {
+			document.getElementById("C").innerHTML = "O";
+		}
+		if (event.data == "D") {
+			document.getElementById("D").innerHTML = "O";
+		}
+		if (event.data == "E") {
+			document.getElementById("E").innerHTML = "O";
+		}
+		if (event.data == "F") {
+			document.getElementById("F").innerHTML = "O";
+		}
+		if (event.data == "G") {
+			document.getElementById("G").innerHTML = "O";
+		}
+		if (event.data == "H") {
+			document.getElementById("H").innerHTML = "O";
+		}
+		if (event.data == "I") {
+			document.getElementById("I").innerHTML = "O";
+		}
+	}
+	function contentLoaded() {
+
+		window.addEventListener("message", myMessageHandler);
+
+	}
+	window.addEventListener("DOMContentLoaded", contentLoaded, false);
+</script>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<td><a href="javascript:ChoiceA()" id="A"><img
+					src="http://211.75.223.181/game/game2/blank.jpg" width=50 height=50></a>
+			</td>
+			<td><a href="javascript:ChoiceB()" id="B"><img
+					src="http://211.75.223.181/game/game2/blank.jpg" width=50 height=50></a>
+			</td>
+			<td><a href="javascript:ChoiceC()" id="C"><img
+					src="http://211.75.223.181/game/game2/blank.jpg" width=50 height=50></a>
+			</td>
+		</tr>
+
+		<tr>
+			<td><a href="javascript:ChoiceD()" id="D"><img
+					src="http://211.75.223.181/game/game2/blank.jpg" width=50 height=50></a>
+			</td>
+			<td><a href="javascript:ChoiceE()" id="E"><img
+					src="http://211.75.223.181/game/game2/blank.jpg" width=50 height=50></a>
+			</td>
+			<td><a href="javascript:ChoiceF()" id="F"><img
+					src="http://211.75.223.181/game/game2/blank.jpg" width=50 height=50></a>
+			</td>
+		</tr>
+
+		<tr>
+			<td><a href="javascript:ChoiceG()" id="G"><img
+					src="http://211.75.223.181/game/game2/blank.jpg" width=50 height=50></a>
+			</td>
+			<td><a href="javascript:ChoiceH()" id="H"><img
+					src="http://211.75.223.181/game/game2/blank.jpg" width=50 height=50></a>
+			</td>
+			<td><a href="javascript:ChoiceI()" id="I"><img
+					src="http://211.75.223.181/game/game2/blank.jpg" width=50 height=50></a>
+			</td>
+		</tr>
+
+	</table>
+	<p id="result">player2</p>
+</body>
+</html>

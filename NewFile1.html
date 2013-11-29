@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+var txt;
+function b()
+{
+	txt = "button";
+	//document.getElementById( 'MyiFrame' ).contentWindow.postMessage( txt, "http://localhost:8080/d20130725/NewFile2.html" );
+	var a= window.open('http://localhost:8080/d20130725/NewFile2.html', 'Joseph', config='height=300,width=300');
+	a.postMessage( txt, "http://localhost:8080/d20130725/NewFile2.html" );
+	alert("1");
+}
+</script>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<button type="button" onclick="b()">按鈕1</button>
+
+
+
+</body>
+</html>

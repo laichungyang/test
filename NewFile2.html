@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type = "text/javascript">
+
+function myMessageHandler( event ) {
+
+if ( event.origin == "http://localhost:7650" ) {
+
+document.getElementById( "result" ).innerHTML = event.data;
+
+// event.source.postMessage( "Response from iFrame: " + event.data , event.origin );
+
+}
+
+}
+
+function contentLoaded() {
+
+window.addEventListener( "message", myMessageHandler );
+
+}
+
+window.addEventListener( "DOMContentLoaded", contentLoaded, false );
+
+</script>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div id = "result">hh </div>
+</body>
+</html>
